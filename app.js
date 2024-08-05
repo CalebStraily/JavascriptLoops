@@ -27,6 +27,7 @@ for (let i = 0; i < seasons.length; i++)
     //Display all season on the websites console
     console.log(`Current iterated season: ${seasons[i]}`);
 }
+
 */
 
 //EXERCISES
@@ -92,7 +93,7 @@ console.log(colors);
 //TODO Categorize each grade
 //output each result
 
-let gradeNumbers = [54, 96, 82, 73, 101];
+let gradeNumbers = [54, 96, 82, 73, 101, "bruh"];
 
 for (let i = 0; i < gradeNumbers.length; i++)
 {
@@ -112,7 +113,8 @@ for (let i = 0; i < gradeNumbers.length; i++)
             break;
         case (gradeNumbers[i] <= 63 && gradeNumbers[i] >= 0):
             console.log(`${gradeNumbers[i]} is an F.`);
-            break; 
+            break;
+        //defaults to this when the value at index i is not within 0-100 or the desired data type
         default:
             console.log(`${gradeNumbers[i]} is not a valid score.`);
             break;
@@ -174,6 +176,9 @@ for (let i = 0; i < temperatureNumbers.length; i++)
         case (temperatureNumbers[i] <= 54):
             console.log(`${temperatureNumbers[i]} is a COLD temperature.`);
             break;
+        default:
+            console.log(`${temperatureNumbers[i]} is not a valid temperature.`);
+            break;
     }
 }
 
@@ -183,7 +188,7 @@ for (let i = 0; i < temperatureNumbers.length; i++)
 //TODO Check the sign of the number
 //output the result
 
-let numbers = [434, -84, 0, -32, -1]
+let numbers = [434, -84, 0, -32, -1];
 
 for (let i = 0; i < numbers.length; i++)
 {
@@ -198,5 +203,7 @@ for (let i = 0; i < numbers.length; i++)
         case (numbers[i] == 0):
             console.log(`${numbers[i]} is neither negative nor positive (is 0).`);
             break;
+        default:
+            console.log(`${numbers[i]} is not a valid number.`);
     }
 }
