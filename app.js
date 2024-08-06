@@ -37,6 +37,8 @@ for (let i = 0; i < seasons.length; i++)
 //TODO Define an array of favorite movies
 //Output each movie individually
 
+/*
+
 let favoriteMovies = ["Cory in the House: All Star Edition", "Night at the Museum", "Paul Blart: Mall Cop"];
 
 for (let i = 0; i < favoriteMovies.length; i++)
@@ -205,5 +207,81 @@ for (let i = 0; i < numbers.length; i++)
             break;
         default:
             console.log(`${numbers[i]} is not a valid number.`);
+    }
+}
+
+//FOR
+for ( let i = 0; i < 5; i++)
+{
+    console.log(`(for) i = ${i}`);
+}
+
+//WHILE
+while (i < 5)
+{
+    console.log(`(while) i = ${i}`);
+    i++;
+}
+
+//DO WHILE
+let j = 0;
+do
+{
+    input = prompt("enter password: ");
+} while (input != "123");
+console.log("access granted");
+
+//FOR EACH
+const numbahs = [1,2,3,4,5];
+
+numbahs.forEach((x) => 
+{
+    if (x === 3)
+    {
+        console.log(x);
+    }
+});
+
+*/
+
+for (let i = 1; i <= 100; i++)
+{
+    switch(true)
+    {
+        case (i % 3 == 0 && i % 5 == 0):
+            console.log("FizzBuzz");
+            break;
+        case (i % 3 == 0):
+            console.log("Fizz");
+            break;
+        case (i % 5 == 0):
+            console.log("Buzz");
+            break;
+        default:
+            console.log(i);
+            break;
+    }
+}
+
+for (let i = 1; i <= 100; i++)
+{
+    //Multiples of 3 and 5
+    if (i % 3 == 0 && i % 5 == 0)
+    {
+        console.log("FizzBuzz");
+    }
+    //Multiples of 3
+    else if (i % 3 == 0) 
+    {
+        console.log("Fizz");
+    }
+    //Multiples of 5
+    else if (i % 5 == 0)
+    {
+        console.log("Buzz");
+    }
+    else
+    {
+        console.log(i);
     }
 }
