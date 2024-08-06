@@ -244,6 +244,7 @@ numbahs.forEach((x) =>
 
 */
 
+/*
 for (let i = 1; i <= 100; i++)
 {
     switch(true)
@@ -285,3 +286,188 @@ for (let i = 1; i <= 100; i++)
         console.log(i);
     }
 }
+
+*/
+
+//! For Loops Problems TWO
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console.log("Problem One Console Output: ");
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+/*
+!Multiples Checker
+? Create a program that checks if the elements in an array of numbers are multiples of a specific number and displays a message accordingly.
+TODO Define an array containing a list of numbers.
+TODO Define a variable for the specific number to check multiples of.
+Output Results: Use console.log to display the results.
+*/
+
+let numbersList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let multiplesCheck = 2;
+
+for (let i = 0; i < numbersList.length; i++)
+{
+    if (numbersList[i] % multiplesCheck == 0)
+    {
+        console.log(`${numbersList[i]} is a multiple of ${multiplesCheck}`);
+    }
+    else
+    {
+        console.log(`${numbersList[i]} is NOT a multiple of ${multiplesCheck}`);
+    }
+}
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console.log("Problem Two Console Output: ");
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+/*
+Age Group Categorizer
+Create a program that categorizes the ages in an array as 'child', 'teen', 'adult', or 'senior' based on their values.
+TODO Define an array containing a list of ages.
+Output Results: Use console.log to display the age categories.
+*/
+
+let ageArray = [5, 15, 18, 50, 83, -2];
+
+for (let i = 0; i < ageArray.length; i++)
+{
+    switch(true)
+    {
+        case (ageArray[i] >= 0 && ageArray[i] <= 12):
+            console.log(`${ageArray[i]} year(s) is the age of a child.`);
+            break;
+        case (ageArray[i] >= 13 && ageArray[i] <= 19):
+            console.log(`${ageArray[i]} years is the age of a teen.`);
+            break;
+        case (ageArray[i] >= 20 && ageArray[i] <= 64):
+            console.log(`${ageArray[i]} years is the age of an adult.`);
+            break;
+        case (ageArray[i] >= 65):
+            console.log(`${ageArray[i]} years is the age of a senior.`);
+            break;
+        default:
+            console.log(`${ageArray[i]} is not a valid age value.`);
+            break;
+    }
+}
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console.log("Problem Three Console Output: ");
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+/*
+! Palindrome Checker
+?Create a program that checks if the elements in an array of strings are palindromes and displays a message accordingly.
+TODO Define an array containing a list of strings.
+Output Results: Use console.log to display the results.
+*/
+
+let palindromeArray = ["Taco Cat", "Mom", "Dad", "Caleb", "Mississippi", "Bob"];
+
+for (let i = 0; i < palindromeArray.length; i++)
+{
+    //stores the value at the current index of stringArray to its own array
+    let string = palindromeArray[i].split(" ").join("");
+    let reversedString = "";
+
+    //reverses the characters of the value stored in string
+    for (let j = string.length - 1; j >= 0; j--)
+    {
+        reversedString += string[j];
+    }
+
+    //compares the original string to its reversed counterpart to see if it equals each other
+    if (string.toUpperCase() == reversedString.toUpperCase())
+    {
+        console.log(`${palindromeArray[i]} is a palindorome.`);
+    }
+    else
+    {
+        console.log(`${palindromeArray[i]} is NOT a palindorome.`);
+    }
+}
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console.log("Problem Four Console Output: ");
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+/*
+!Prime Number Checker
+?Create a program that checks if the elements in an array of numbers are prime and displays a message accordingly.
+TODO Define an array containing a list of numbers.
+Output Results: Use console.log to display the results.
+*/
+
+let numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+
+for (let i = 0; i < numbersArray.length; i++)
+{
+    let divisibleByOne = false;
+    let divisibleByItself = false;
+    let divisibleByOther = false;
+
+    //repeats until j equals value currently at numbersArray[i]
+    for (let j = 1; j <= numbersArray[i]; j++)
+    {
+        //only runs when remainder of the current numbersArray[i] value divided by j is equal to 0
+        if (numbersArray[i] % j == 0)
+        {
+            //sets boolean variables to true if numbersArray[i] is divisible by 1, itself, or any other number
+            switch (true)
+            {
+                case (j == 1):
+                    divisibleByOne = true;
+                    break;
+                case (j == numbersArray[i]):
+                    divisibleByItself = true;
+                    break;
+                default:
+                    divisibleByOther = true;
+                    break;
+            }
+        }
+    }
+
+    //compares the boolean variables values and determines if the current value at numbersArray[i] is a prime number or not
+    switch(true)
+    {
+        case (divisibleByOne == true && divisibleByItself == true && divisibleByOther == false):
+            console.log(`${numbersArray[i]} is a prime number.`);
+            break;
+        case (divisibleByOther == true || numbersArray[i] == 0 || numbersArray[i] == 1):
+            console.log(`${numbersArray[i]} is NOT a prime number.`);
+            break;
+        default:
+            console.log("Something went wrong with calculations.");
+            break;
+    }
+}
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console.log("Problem Five Console Output: ");
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+/*
+!Uppercase Checker
+?Create a program that checks if the elements in an array of strings are in uppercase and displays a message accordingly.
+TODO Define an array containing a list of strings.
+Output Results: Use console.log to display the results.
+*/
+
+let stringArray = ["BRUH", "Hello", "goodbye", "see you later", "123"];
+
+for (let i = 0; i < stringArray.length; i++)
+{
+    if (stringArray[i] == stringArray[i].toUpperCase())
+    {
+        console.log(`${stringArray[i]} is uppercase.`);
+    }
+    else
+    {
+        console.log(`${stringArray[i]} is NOT uppercase.`);
+    }
+}
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
