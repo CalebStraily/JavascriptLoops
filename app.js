@@ -289,7 +289,7 @@ for (let i = 1; i <= 100; i++)
 
 */
 
-//! For Loops Problems TWO
+//For Loops Problems TWO
 
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 console.log("Problem One Console Output: ");
@@ -471,3 +471,31 @@ for (let i = 0; i < stringArray.length; i++)
 }
 
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+//NESTED LOOPS
+//Global and local scope
+
+//Global = This variable is accessible from any point in this file.
+let global = "Hello!";
+
+//OUTER LOOP RUNS 10 TIMES
+for (let i = 1; i <= 10; i++)
+{
+    let myName = "Caleb Straily";
+    console.log(myName);
+    //INNER LOOP IS GOING TO RUN 50 TIMES
+    for (let j=1; j <= 5; j++)
+    {
+        console.log(`${i} * ${j} = ${i * j}`);
+    }
+}
+
+//outputs an exception because it is out of the scope it was instantiated in
+//console.log(myName);
+
+let firstWord = "Hello";
+
+{
+    let secondWord = " World!";
+    console.log(firstWord + secondWord);
+}
